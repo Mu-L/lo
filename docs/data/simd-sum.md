@@ -43,19 +43,6 @@ signatures:
 
 Sums the values in a collection using SIMD instructions. The suffix (x2, x4, x8, x16, x32, x64) indicates the number of lanes processed simultaneously.
 
-## Requirements
-
-- **Go 1.26+** with `GOEXPERIMENT=simd`
-- **amd64** architecture only
-
-### CPU compatibility
-
-| SIMD variant | Lanes | Required flags | Typical CPUs                   |
-| ------------ | ----- | -------------- | ------------------------------ |
-| AVX (xN)     | 2-16  | `avx`          | All amd64                      |
-| AVX2 (xN)    | 4-32  | `avx2`         | Intel Haswell+, AMD Excavator+ |
-| AVX-512 (xN) | 8-64  | `avx512f`      | Intel Skylake-X+, some Xeons   |
-
 > **Note**: Choose the variant matching your CPU's capabilities. Higher lane counts provide better performance but require newer CPU support.
 
 ```go

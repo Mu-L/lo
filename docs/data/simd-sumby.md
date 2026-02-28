@@ -53,19 +53,6 @@ signatures:
 
 SumBy transforms a collection using an iteratee function and sums the result using SIMD instructions. The automatic dispatch functions (e.g., `SumByInt8`) will select the best SIMD variant based on CPU capabilities. The specific variants (e.g., `SumByInt8x32`) use a fixed SIMD instruction set regardless of CPU capabilities.
 
-## Requirements
-
-- **Go 1.26+** with `GOEXPERIMENT=simd`
-- **amd64** architecture only
-
-### CPU compatibility
-
-| SIMD variant | Lanes | Required flags | Typical CPUs                   |
-| ------------ | ----- | -------------- | ------------------------------ |
-| AVX (xN)     | 2-16  | `avx`          | All amd64                      |
-| AVX2 (xN)    | 4-32  | `avx2`         | Intel Haswell+, AMD Excavator+ |
-| AVX-512 (xN) | 8-64  | `avx512f`      | Intel Skylake-X+, some Xeons   |
-
 > **Note**: The automatic dispatch functions (e.g., `SumByInt8`) will use the best available SIMD variant for the current CPU. Use specific variants (e.g., `SumByInt8x32`) only if you know your target CPU supports that instruction set.
 
 ```go

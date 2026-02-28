@@ -1,5 +1,5 @@
 ---
-title: SIMD operations
+title: SIMD
 description: High-performance slice operations using AVX, AVX2 and AVX512 SIMD when built with Go 1.26+ and GOEXPERIMENT=simd on amd64.
 sidebar_position: 0
 hide_table_of_contents: true
