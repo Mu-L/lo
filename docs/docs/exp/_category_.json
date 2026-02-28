@@ -1,8 +1,8 @@
 {
-  "label": "💨 SIMD",
+  "label": "🧪 Experimental",
   "position": 5,
   "link": {
     "type": "generated-index",
-    "description": "SIMD operations"
+    "description": "Experimental features"
   }
 }

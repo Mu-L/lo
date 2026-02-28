@@ -10,6 +10,9 @@ on:
     paths:
       - 'exp/simd/**'
 
+env:
+  GOEXPERIMENT: simd
+
 jobs:
   test-simd:
     # GitHub hosted runners run on several architectures.
